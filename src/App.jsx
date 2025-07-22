@@ -5,7 +5,7 @@ import { useDebounce } from "./hooks/useDebounce";
 import { useBooks } from "./hooks/useBooks";
 
 function App() {
-  const [inputValue, setInputValue] = useState("the");
+  const [inputValue, setInputValue] = useState("");
   const debouncedSearchTerm = useDebounce(inputValue, 500);
   const { books, isLoading, error } = useBooks(debouncedSearchTerm);
 

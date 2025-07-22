@@ -7,10 +7,6 @@ export function useBooks(getTerm) {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    if (!getTerm) {
-      setBooks([]);
-      return;
-    }
 
     const fetchBooks = async () => {
       setIsLoading(true);
